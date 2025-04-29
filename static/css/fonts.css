@@ -30,10 +30,8 @@
   font-style: italic;
   font-display: swap;
 }
-
 :root {
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  --font-family-base: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 /* 코드 블록 및 고정폭 텍스트에 적용 */
@@ -43,5 +41,5 @@ code, pre, kbd, samp {
 
 /* 전체 본문 글에도 적용하고 싶다면 */
 body, html, .main, .post-content, .entry-content {
-  font-family: var(--font-family-base) !important;
+  /* font-family: 'JetBrains Mono', sans-serif !important; */
 }
