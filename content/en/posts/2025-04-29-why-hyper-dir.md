@@ -1,6 +1,6 @@
 +++
 date = '2025-04-29T20:54:52+09:00'
-draft = true
+draft = false
 title = 'Why I Started Building a Windows File Explorer with Rust'
 description = "The origin story of the Hyper-Dir project, and why I chose Rust, React, and Tauri — with a UI inspired by VSCode."
 tags = ["Rust", "Tauri", "React", "File Explorer", "Project Story"]
