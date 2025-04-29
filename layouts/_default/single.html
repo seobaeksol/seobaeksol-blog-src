@@ -64,9 +64,37 @@
 
 <div id="giscus_thread" class="mt-10"></div>
 
-<script src="https://giscus.app/client.js" data-repo="seobaeksol/seobaeksol.github.io" data-repo-id="R_kgDOOhg6AA"
-  data-category="General" data-category-id="DIC_kwDOOhg6AM4CplKm" data-mapping="pathname" data-strict="0"
-  data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
-  data-theme="https://seobaeksol.github.io/css/giscus.css" data-lang="en" crossorigin="anonymous" async>
-  </script>
+<!-- layouts/partials/comments.html 또는 single.html 등에 추가 -->
+<div id="giscus-container"></div>
+<script>
+  function loadGiscus(theme) {
+    const giscusContainer = document.getElementById('giscus-container');
+    giscusContainer.innerHTML = ""; // 기존 iframe 제거
+
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'seobaeksol/seobaeksol.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOOhg6AA');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOOhg6AM4CplKm');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-theme', theme);  // 중요!
+    script.setAttribute('crossorigin', 'anonymous');
+    script.setAttribute('async', 'true');
+
+    giscusContainer.appendChild(script);
+  }
+
+  // 초기 로드
+  const isDark = document.getElementById('top').classList.contains('dark');
+  loadGiscus(isDark ? 'transparent_dark' : 'light');
+
+  // PaperMod 테마 토글 감지 (버튼 클릭 후)
+  const observer = new MutationObserver(() => {
+    const isNowDark = document.getElementById('top').classList.contains('dark');
+    loadGiscus(isNowDark ? 'transparent_dark' : 'light');
+  });
+  observer.observe(document.getElementById('top'), { attributes: true, attributeFilter: ['class'] });
+</script>
+
 {{- end }}{{/* end main */}}
