@@ -1,0 +1,28 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/hugo_stats.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node modules (만약 npm, yarn, pnpm 사용시)
+node_modules/
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# Backup & temp files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Logs
+*.log
+
+# Netlify or Vercel folders (만약 사용 중이라면)
+/.netlify/
+/.vercel/
