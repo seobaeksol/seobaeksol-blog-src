@@ -69,4 +69,5 @@ ShowToc = true
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-[menu]
+[params.assets]
+customCSS = ["custom.css", "css/extended/fonts.css"]
