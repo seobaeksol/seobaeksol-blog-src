@@ -34,14 +34,19 @@ url = "/posts/"
 weight = 2
 
 [[languages.ko.menu.main]]
-name = "일기"
-url = "/diary/"
+name = "태그"
+url = "/tags/"
 weight = 3
+
+[[languages.ko.menu.main]]
+name = "카테고리"
+url = "/categories/"
+weight = 4
 
 [[languages.ko.menu.main]]
 name = "검색"
 url = "/search/"
-weight = 4
+weight = 5
 
 
 [languages.en.menu]
@@ -56,14 +61,19 @@ url = "/posts/"
 weight = 2
 
 [[languages.en.menu.main]]
-name = "Diary"
-url = "/diary/"
+name = "Tags"
+url = "/tags/"
 weight = 3
+
+[[languages.en.menu.main]]
+name = "Categories"
+url = "/categories/"
+weight = 4
 
 [[languages.en.menu.main]]
 name = "Search"
 url = "/search/"
-weight = 4
+weight = 5
 
 
 [pagination]
