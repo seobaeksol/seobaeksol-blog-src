@@ -28,7 +28,7 @@
 
 <div id="recentPosts" class="recent-posts">
   <h2>
-    {{- if eq .Site.Language.Lang "ko" -}}
+    {{- if eq .Site.Language.Lang "ko" -}}Í
     최근 포스트
     {{- else if eq .Site.Language.Lang "en" -}}
     Recent Posts
@@ -92,7 +92,7 @@
   }
 
   .recent-posts h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
   }
 
@@ -105,7 +105,7 @@
   .post-year {
     padding-top: 6px;
     margin-right: 1.8rem;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--secondary);
   }
@@ -137,6 +137,7 @@
   .post-title {
     color: var(--primary);
     font-weight: 500;
+    font-size: 1rem;
   }
 
   .post-day {
