@@ -66,6 +66,15 @@ ShowCodeCopyButtons = true
 ShowPostNavLinks = true
 ShowToc = true
 
+[params.homeInfoParams]
+Title = "Seobaeksol Dev Blog"
+Content = "Seobaeksol Dev Blog"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/seobaeksol"
+
+
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
