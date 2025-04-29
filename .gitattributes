@@ -1,0 +1,31 @@
+# 기본적으로 텍스트 파일은 LF 사용 (모든 OS에서 일관된 라인 엔딩 유지)
+* text=auto eol=lf
+
+# Markdown, TOML, YAML 파일은 명시적으로 text 처리
+*.md text
+*.toml text
+*.yaml text
+*.yml text
+
+# 이미지 파일은 바이너리로 처리 (diff 불가)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.webp binary
+
+# 폰트나 기타 미디어 파일도 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.mp4 binary
+*.mp3 binary
+*.pdf binary
+
+# Hugo 통계 파일 무시
+hugo_stats.json linguist-generated
+
+# IDE 관련 파일 무시
+*.iml linguist-generated
