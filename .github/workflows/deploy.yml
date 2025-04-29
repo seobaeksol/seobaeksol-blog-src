@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout blog-src
+        uses: actions/checkout@v3
+        with:
+          submodules: true # PaperMod 같은 테마용
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.147.0"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to seobaeksol.github.io
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAT }}
+          external_repository: seobaeksol/seobaeksol.github.io
+          publish_dir: ./public
+          publish_branch: main
+          force_orphan: true
