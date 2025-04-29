@@ -37,6 +37,11 @@ name = "일기"
 url = "/diary/"
 weight = 3
 
+[[languages.ko.menu.main]]
+name = "검색"
+url = "/search/"
+weight = 4
+
 
 [languages.en.menu]
 [[languages.en.menu.main]]
@@ -54,6 +59,11 @@ name = "Diary"
 url = "/diary/"
 weight = 3
 
+[[languages.en.menu.main]]
+name = "Search"
+url = "/search/"
+weight = 4
+
 
 [pagination]
 pagerSize = 10
@@ -65,6 +75,7 @@ ShowReadingTime = true
 ShowCodeCopyButtons = true
 ShowPostNavLinks = true
 ShowToc = true
+ShowSearch = true
 
 [params.homeInfoParams]
 Title = "Seobaeksol Dev Blog"

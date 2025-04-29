@@ -1,0 +1,149 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+  {{- if not (.Param "hideMeta") }}
+  <div class="post-meta">
+    {{- partial "translation_list.html" . -}}
+  </div>
+  {{- end }}
+</header>
+
+<div id="searchbox">
+  <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf " %s ↵" .Title) }}"
+    aria-label="search" type="search" autocomplete="off" maxlength="64">
+  <ul id="searchResults" aria-label="search results"></ul>
+</div>
+
+<div id="recentPosts" class="recent-posts">
+  <h2>
+    {{- if eq .Site.Language.Lang "ko" -}}
+    최근 포스트
+    {{- else if eq .Site.Language.Lang "en" -}}
+    Recent Posts
+    {{- else -}}
+    Recent Posts
+    {{- end -}}
+  </h2>
+  <div class="posts-group">
+    <div class="post-year">{{ now.Year }}</div>
+    <ul class="posts-list">
+      {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{- $recent := first 10 $pages.ByDate.Reverse }}
+      {{- range $recent }}
+      <li class="post-item">
+        <a href="{{.Permalink}}">
+          <span class="post-title">{{.Title}}</span>
+          <span class="post-day">
+            {{ if .Site.Params.dateformShort }}
+            {{ .Date.Format .Site.Params.dateformShort }}
+            {{ else }}
+            {{ .Date.Format "Jan 2"}}
+            {{ end }}
+          </span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const recentPosts = document.getElementById('recentPosts');
+
+    // 검색어가 없을 때 최근 포스트 표시
+    function toggleRecentPosts() {
+      if (searchInput.value.trim() === '') {
+        recentPosts.style.display = 'block';
+        searchResults.style.display = 'none';
+      } else {
+        recentPosts.style.display = 'none';
+        searchResults.style.display = 'block';
+      }
+    }
+
+    // 초기 상태 설정
+    toggleRecentPosts();
+
+    // 입력 이벤트 리스너
+    searchInput.addEventListener('input', function () {
+      toggleRecentPosts();
+    });
+  });
+</script>
+
+<style>
+  .recent-posts {
+    margin-top: 2rem;
+  }
+
+  .recent-posts h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .posts-group {
+    display: flex;
+    margin-bottom: 1.9rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .post-year {
+    padding-top: 6px;
+    margin-right: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--secondary);
+  }
+
+  .posts-list {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .post-item {
+    padding-left: 1.6rem;
+    border-left: 1px solid var(--border);
+  }
+
+  .post-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .post-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.2rem 0;
+    text-decoration: none;
+  }
+
+  .post-title {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  .post-day {
+    flex-shrink: 0;
+    margin-left: 1rem;
+    color: var(--secondary);
+  }
+</style>
+
+{{- end }}{{/* end main */}}
