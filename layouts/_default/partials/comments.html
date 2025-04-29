@@ -1,0 +1,47 @@
+<script
+  src="https://giscus.app/client.js"
+  data-repo="seobaeksol/seobaeksol.github.io"
+  data-repo-id="R_kgDOOhg6AA"
+  data-category="General"
+  data-category-id="DIC_kwDOOhg6AM4CplKm"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-lang="{{ .Site.Language.Lang }}"
+  crossorigin="anonymous"
+  async
+></script>
+
+<script>
+  function setGiscusTheme() {
+    const theme = document.body.classList.contains("dark")
+      ? "transparent_dark"
+      : "light";
+    const iframe = document.querySelector("iframe.giscus-frame");
+    if (iframe) {
+      iframe.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: theme,
+            },
+          },
+        },
+        "https://giscus.app"
+      );
+    }
+  }
+
+  // 페이지 로드 시 한 번 실행
+  window.addEventListener("DOMContentLoaded", setGiscusTheme);
+
+  // 테마 토글 시에도 실행 (PaperMod는 body에 .dark 클래스를 토글함)
+  document
+    .getElementById("theme-toggle")
+    ?.addEventListener("click", function () {
+      // giscus iframe이 테마 적용 후 렌더링되도록 약간의 딜레이를 줌
+      setTimeout(setGiscusTheme, 100);
+    });
+</script>
