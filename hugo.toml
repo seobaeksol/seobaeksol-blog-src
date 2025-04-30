@@ -93,7 +93,16 @@ comments = true
 
 [params.homeInfoParams]
 Title = "Seobaeksol Dev Blog"
-Content = "Seobaeksol Dev Blog"
+Content = "Hi, I'm Seobaeksol. I enjoy building fun and useful things using languages like Rust, React, and Python. Currently, I'm developing a file explorer called Hyper-Dir, built with Rust and React on top of Tauri. This blog is where I document my development journey along the way."
+
+[languages.ko.params.homeInfoParams]
+Title = "서백솔 개발 블로그"
+Content = "안녕하세요, 서백솔입니다. Rust, React, Python 등 다양한 언어로 재미있는 것을 만드는 걸 좋아합니다. 현재는 Tauri 기반으로 Rust와 React를 활용해 파일 탐색기 Hyper-Dir을 개발 중입니다. 이 블로그에는 그 과정에서의 개발 기록을 담고 있습니다."
+
+
+[languages.en.params.homeInfoParams]
+Title = "Seobaeksol Dev Blog"
+Content = "Hi, I'm Seobaeksol. I enjoy building fun and useful things using languages like Rust, React, and Python. Currently, I'm developing a file explorer called Hyper-Dir, built with Rust and React on top of Tauri. This blog is where I document my development journey along the way."
 
 [[params.socialIcons]]
 name = "github"
