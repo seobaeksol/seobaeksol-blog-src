@@ -1,0 +1,40 @@
+.home-info-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+}
+
+.home-info-content {
+    flex: 1;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .home-info-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .entry-footer {
+        justify-content: center;
+    }
+} 
