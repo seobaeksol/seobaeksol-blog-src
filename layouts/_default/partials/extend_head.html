@@ -1,1 +1,10 @@
-<link rel="stylesheet" href="/css/fonts.css" />
+{{/*
+자동으로 hugo.toml의 [params.assets].customCSS 값을 읽어서
+각각의 CSS 파일에 대해
+<link rel="stylesheet" ...> 태그를 생성합니다.
+*/}}
+{{- with site.Params.assets.customCSS }}
+{{- range . }}
+<link rel="stylesheet" href="{{ . | relURL }}" />
+{{- end }}
+{{- end }}

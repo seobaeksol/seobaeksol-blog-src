@@ -1,0 +1,106 @@
+.toc-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  max-width: 250px;
+  padding: 1.2em;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  max-height: 80vh;
+  z-index: 999;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Light mode styles */
+[data-theme="light"] .toc-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .toc-container a {
+  color: #4a5568;
+}
+
+[data-theme="light"] .toc-container a:hover,
+[data-theme="light"] .toc-container a.active {
+  color: #2563eb;
+}
+
+[data-theme="light"] .toc-container li.active > a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .toc-container {
+  background-color: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .toc-container a {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .toc-container a:hover,
+[data-theme="dark"] .toc-container a.active {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .toc-container li.active > a {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* Common styles */
+.toc-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.toc-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc-container ul ul {
+  padding-left: 1em;
+  margin-top: 0.2em;
+  border-left: 1px solid rgba(125, 125, 125, 0.2);
+}
+
+.toc-container li {
+  margin: 0.5em 0;
+  position: relative;
+}
+
+.toc-container a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: block;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+}
+
+.toc-container a:hover {
+  background-color: rgba(125, 125, 125, 0.1);
+}
+
+.toc-container li.active > a {
+  background-color: rgba(125, 125, 125, 0.1);
+}
+
+/* First level items */
+.toc-container > ul > li > a {
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+@media (max-width: 1024px) {
+  .toc-container {
+    display: none;
+  }
+} 

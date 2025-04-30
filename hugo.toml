@@ -100,4 +100,4 @@ name = "github"
 url = "https://github.com/seobaeksol"
 
 [params.assets]
-customCSS = ["custom.css", "css/extended/fonts.css"]
+customCSS = ["css/styles.css", "css/fonts.css"]
