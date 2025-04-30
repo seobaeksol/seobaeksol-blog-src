@@ -3,7 +3,7 @@ title = "Seobaeksol Dev Blog"
 theme = "PaperMod"
 enableRobotsTXT = true
 buildDrafts = false
-defaultContentLanguage = "ko"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
 
