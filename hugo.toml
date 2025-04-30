@@ -15,7 +15,7 @@ home = ["HTML", "RSS", "JSON"]
 [languages.ko]
 languageName = "한국어"
 weight = 1
-title = "Seobaeksol 블로그"
+title = "서백솔 블로그"
 
 [languages.en]
 languageName = "English"
