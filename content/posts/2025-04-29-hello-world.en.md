@@ -10,7 +10,7 @@ categories = ["intro"]
 
 It's my first blog post!
 
-```ts
+```ts {linenos=true}
 let test = 10;
 console.log("test ->", test);
 ```

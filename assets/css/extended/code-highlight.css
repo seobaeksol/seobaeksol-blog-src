@@ -1,0 +1,7 @@
+.post-content .highlight > div {
+  border-radius: var(--radius);
+}
+
+.post-content .highlight code {
+  border-radius: 0;
+}
