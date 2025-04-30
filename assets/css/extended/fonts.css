@@ -30,13 +30,14 @@
   font-style: italic;
   font-display: swap;
 }
+
 :root {
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New";
 }
 
 /* 코드 블록 및 고정폭 텍스트에 적용 */
-code, pre, kbd, samp {
+code, pre, kbd, samp, .highlight {
   font-family: var(--font-mono) !important;
-  letter-spacing: -0.03em;  /* 코드 블록용 자간 설정 */
 }
+
 
