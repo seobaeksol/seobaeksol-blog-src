@@ -1,0 +1,295 @@
+{{ define "main" }}
+<article class="profile-main">
+  <!-- About Me Section -->
+
+  <section class="about-section">
+    <h2>About Me - 현재 테스트용 더미입니다.</h2>
+    <div class="about-container">
+      <div class="about-photo">
+        <img src="/images/profile.jpg" alt="Profile Photo" />
+      </div>
+      <div class="about-info">
+        <p class="about-intro">
+          안녕하세요, 서백솔입니다.<br>
+          Rust, React, Python 등 다양한 언어로 재미있는 것을 만드는 개발자입니다.<br>
+          현재는 Tauri 기반 파일 탐색기 <b>Hyper-Dir</b>을 개발 중입니다.
+        </p>
+        <ul class="about-meta">
+          <li><b>이름:</b> 서백솔</li>
+          <li><b>이메일:</b> suyoung154@email.com</li>
+          <li><b>주소:</b> 경기도 화성시</li>
+          <li>
+            <b>소셜:</b>
+            <a href="https://github.com/seobaeksol" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/kimpeupeu" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience-section">
+    <h2>My Experience</h2>
+    <div class="experience-list">
+      <div class="experience-card">
+        <h3>Senior Developer</h3>
+        <span class="exp-period">2020 - Present</span>
+        <div class="exp-company">Awesome Company</div>
+        <ul>
+          <li>주요 서비스 아키텍처 설계 및 개발</li>
+          <li>팀 리딩 및 코드 리뷰</li>
+          <li>Rust, React, Node.js 등 다양한 기술 스택 활용</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <h3>Junior Developer</h3>
+        <span class="exp-period">2018 - 2020</span>
+        <div class="exp-company">Previous Company</div>
+        <ul>
+          <li>웹 프론트엔드 및 백엔드 개발</li>
+          <li>다양한 프로젝트 참여 및 유지보수</li>
+          <li>Python, JavaScript, SQL 등 경험</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <h3>Hyper-Dir</h3>
+        <p>Rust와 React, Tauri로 만든 현대적인 파일 탐색기</p>
+        <div class="project-tags">
+          <span>Rust</span><span>React</span><span>Tauri</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/seobaeksol/hyper-dir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://hyper-dir.com" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Blog</h3>
+        <p>Hugo 기반의 기술 블로그 및 포트폴리오 사이트</p>
+        <div class="project-tags">
+          <span>Hugo</span><span>HTML</span><span>CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/seobaeksol/portfolio-blog" target="_blank"><i class="fab fa-github"></i>
+            GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Chatbot Service</h3>
+        <p>Python과 FastAPI로 만든 실시간 챗봇 서비스</p>
+        <div class="project-tags">
+          <span>Python</span><span>FastAPI</span><span>NLP</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/seobaeksol/chatbot-service" target="_blank"><i class="fab fa-github"></i>
+            GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<!-- 스타일 -->
+<style>
+  .profile-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+  }
+
+  .about-photo img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 3px solid var(--point);
+    background: var(--main-bg);
+  }
+
+  .about-info {
+    flex: 1;
+  }
+
+  .about-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+    color: var(--text-sub);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--text-sub);
+    font-size: 0.95rem;
+  }
+
+  .about-meta li {
+    margin-bottom: 0.4rem;
+  }
+
+  .about-meta a {
+    color: var(--point);
+    margin-right: 0.7rem;
+    font-size: 1.1rem;
+  }
+
+  .experience-section {
+    margin-bottom: 3rem;
+  }
+
+  .experience-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .experience-card {
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    min-width: 250px;
+    flex: 1 1 300px;
+  }
+
+  .experience-card h3 {
+    color: var(--point);
+    margin-bottom: 0.3rem;
+  }
+
+  .exp-period {
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+
+  .exp-company {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+  }
+
+  .experience-card ul {
+    padding-left: 1rem;
+    color: var(--text-sub);
+    font-size: 0.95rem;
+  }
+
+  .projects-section {
+    margin-bottom: 2rem;
+  }
+
+  .projects-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .project-card h3 {
+    color: var(--point);
+    margin-bottom: 0.3rem;
+  }
+
+  .project-tags {
+    margin: 0.4rem 0 0.6rem 0;
+  }
+
+  .project-tags span {
+    background: var(--main-bg);
+    color: var(--point);
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .project-links a {
+    color: var(--point);
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .project-links a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+
+    .about-container,
+    .experience-list {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-photo img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .profile-main {
+      padding: 1rem 0.5rem 2rem 0.5rem;
+    }
+
+    .about-container,
+    .experience-list {
+      padding: 1rem;
+    }
+
+    .projects-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{{ end }}

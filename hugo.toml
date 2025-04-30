@@ -48,6 +48,10 @@ name = "검색"
 url = "/search/"
 weight = 5
 
+[[languages.ko.menu.main]]
+name = "프로필"
+url = "/profile/"
+weight = 6
 
 [languages.en.menu]
 [[languages.en.menu.main]]
@@ -75,6 +79,10 @@ name = "Search"
 url = "/search/"
 weight = 5
 
+[[languages.en.menu.main]]
+name = "Profile"
+url = "/profile/"
+weight = 6
 
 [pagination]
 pagerSize = 10
@@ -92,7 +100,6 @@ ShowBreadCrumbs = true
 comments = true
 description = "Seobaeksol Dev Blog"
 images = ["/images/profile.jpg"]
-
 
 [params.homeInfoParams]
 Title = "Seobaeksol Dev Blog"
