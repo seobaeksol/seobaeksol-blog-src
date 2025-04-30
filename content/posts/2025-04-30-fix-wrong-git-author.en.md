@@ -70,6 +70,12 @@ git rebase -i abc1234^
 
 > The `^` symbol means "start rebasing from the commit **before** this one."
 
+Or if you want to rebase from the very first commit:
+
+```bash
+git rebase -i --root
+```
+
 When the list appears, change `pick` to `edit` and save.
 
 > #### 💡 Quick Edit Tip
@@ -129,3 +135,8 @@ It's a bit more work, but it's a preventive measure to avoid repeating this mist
 
 This experience taught me how a small mistake can mess up your history.  
 I hope this guide helps if you find yourself in a similar situation.
+
+---
+
+> 📚 **References**  
+> This post was written with reference to [madplay's blog](https://madplay.github.io/post/change-git-author-name).
