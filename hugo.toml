@@ -90,6 +90,9 @@ ShowSearch = true
 ShowShareButtons = true
 ShowBreadCrumbs = true
 comments = true
+description = "Seobaeksol Dev Blog"
+images = ["/images/profile.jpg"]
+
 
 [params.homeInfoParams]
 Title = "Seobaeksol Dev Blog"
